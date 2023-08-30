@@ -1,7 +1,17 @@
+using Microsoft.EntityFrameworkCore;
+using StudyRazoPage.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+
+
+builder.Services.AddDbContext<RazorPageDbContext>(opt =>
+{
+    //GetConnetionsString : có th? t?o nhìu k?t n?i database
+    opt.UseSqlServer(builder.Configuration.GetConnectionString("Default"));
+});
 
 var app = builder.Build();
 

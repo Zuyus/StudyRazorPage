@@ -12,15 +12,15 @@ namespace StudyRazoPage.Models
         public DbSet<AppProductImage> AppProductImages { get; set; }
         public DbSet<AppUser> AppUsers { get; set; }
 
-        /*  public RazorPageDbContext(DbContextOptions options) : base(options)
+        public RazorPageDbContext(DbContextOptions options) : base(options)
           {
 
-          }*/
+          }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            var connection = "Server=DESKTOP-VLRDD54\\MSSQLSERVER01;Database=RazorPage;Trusted_Connection=True;Encrypt=False";
-            optionsBuilder.UseSqlServer(connection);
-        }
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    var connection = "Server=DESKTOP-VLRDD54\\MSSQLSERVER01;Database=RazorPage;Trusted_Connection=True;Encrypt=False";
+        //    optionsBuilder.UseSqlServer(connection);
+        //}
     }
 }

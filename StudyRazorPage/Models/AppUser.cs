@@ -16,6 +16,7 @@ namespace StudyRazorPage.Models
         [Required(ErrorMessage ="Tên đăng nhập là bắt buộc")]
         //do dai ki tu
         [MaxLength(100)]
+        [MinLength(4)]
         public string Username {get;set;}
         [Required(ErrorMessage = "Vui lòng nhập mật khẩu !")]
         [MaxLength(200)]
@@ -36,6 +37,7 @@ namespace StudyRazorPage.Models
         public string Address {get;set;}
         [Required(ErrorMessage = "Vui lòng nhập mail  !")]
         [MaxLength(50)]
+        [DataType(DataType.EmailAddress)]
         public string Email {get;set;}
         public DateTime? BlockedTo { get; set; }//Dùng cho chức năng khóa tài khoản
     }
