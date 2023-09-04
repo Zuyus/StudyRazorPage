@@ -8,16 +8,16 @@ namespace StudyRazorPage.Pages.Client
 {
     public class RegisterModel : PageModel
     {
-        //Lien ket tren giao dien
+        //Liên kết trên giao diện
         [BindProperty]   
         public AppUser user { get; set; }
-       //get hi?n th? data
+       //get hiển thị data
         public void OnGet()
         {
-
+            
 
         }
-        //post thêm và xoá data (Nh?n nút dk thì nó s? ch?y vào ?ây
+        //post thêm và xoá data (Nhấn nút đký thì nó sẽ chạy vào đây !)
         public ActionResult OnPost([FromServices] RazorPageDbContext db)
         {
             //check 
